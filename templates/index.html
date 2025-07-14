@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SmartEdu - Smart Study Planner</title>
+  
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body class="bg-light text-center p-5">
+
+  <!-- Main Container -->
+  <div class="container" data-aos="fade-up">
+
+    <!-- Logo -->
+    <div class="text-center mb-3">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="SmartEdu Logo" class="logo-circle">
+    </div>
+
+    <!-- Heading -->
+    <h1 class="mb-3 text-primary">📚 SmartEdu</h1>
+    <p class="mb-4">Plan your study schedule intelligently using Machine Learning!</p>
+
+    <!-- Form -->
+    <form action="/result" method="post" class="shadow-sm">
+
+      <div class="mb-3">
+        <label for="hours" class="form-label">How many hours can you study today?</label>
+        <input type="number" class="form-control" id="hours" name="hours" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="difficulty" class="form-label">Difficulty level of topics (1-10):</label>
+        <input type="number" class="form-control" id="difficulty" name="difficulty" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Get Study Plan</button>
+    </form>
+  </div>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>

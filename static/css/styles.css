@@ -1,0 +1,86 @@
+/* SmartEdu static/css/styles.css */
+
+body {
+    background: linear-gradient(to right, #dbeafe, #f0fdfa);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+h1, h2 {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* Logo Styling */
+.logo-circle {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+form:hover {
+    transform: scale(1.02);
+}
+
+/* Button */
+.btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+.btn-primary:hover {
+    background-color: #1e40af;
+}
+
+/* Container Centering */
+.container {
+    max-width: 500px;
+    margin: 50px auto; /* centers the container horizontally */
+    text-align: center;
+}
+
+/* Image fallback (non-logo) */
+img:not(.logo-circle) {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .logo-circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    form {
+        padding: 1.5rem;
+    }
+}
